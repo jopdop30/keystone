@@ -356,7 +356,6 @@ module.exports = class Keystone {
       composePlugins(config.plugins || [])(config, { listKey: key, keystone: this }),
       {
         getListByKey,
-        queryHelper: this._buildQueryHelper.bind(this),
         adapter: adapters[adapterName],
         defaultAccess: this.defaultAccess,
         registerType: type => this.registeredTypes.add(type),
